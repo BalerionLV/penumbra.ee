@@ -1,6 +1,7 @@
 body{
     padding: 80px 0 0 0;
     margin: 0;
+    background: url(../assets/bg1.jpg);
 }
 a{
     text-decoration: none;
@@ -10,7 +11,7 @@ h1, h2, h3, h4, h5 ,h6{
     margin: 0;
 }
 .dark-bg{
-    background-color: #3F3C3D;
+    background-color: #373234;
     width: 100%;
 }
 .container{
@@ -76,6 +77,7 @@ h1, h2, h3, h4, h5 ,h6{
     top:0;
     left:0;
     right: 0;
+    border-bottom: 1px solid #5f795e;
 }
 .banner{
     font-size: 20px;
@@ -121,7 +123,7 @@ h1, h2, h3, h4, h5 ,h6{
 * ========
 */
 .content-container{
-    border:1px solid #BCBCBC;
+    border:1px solid #5f795e;
     margin-bottom: 25px;
 }
 .left-content{
