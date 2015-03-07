@@ -15,7 +15,12 @@
             <ul class="top-menu">
                 <li><a href="#">Blog</a></li>
                 <li><a href="https://zkillboard.com/corporation/98268576/">Killboard</a></li>
-                <li><a href="#">API check</a></li>
+                <li><a class="login-hover-btn" href="#">Login</a></li>
+                    <div class="login-form">
+                        <input class="login-input-fields" type="text" placeholder="Login">
+                        <input class="login-input-fields" type="password" placeholder="Password">
+                        <input class="login-btn" type="button" value="Enter">
+                    </div>
             </ul>
             <div class="mobile-top-menu">
                 -MENU-
@@ -29,6 +34,7 @@
         </div>
         <div class="left-content">
             <h2>ANOTHER HEADING</h2>
+            <?php echo date("Y/m/d"); ?>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -66,4 +72,6 @@
         <div class="clear-both"></div>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/script.js"></script>
 </html>

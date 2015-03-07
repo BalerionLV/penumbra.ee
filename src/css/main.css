@@ -56,13 +56,14 @@ h1, h2, h3, h4, h5 ,h6{
     padding: 0;
     color: #f2ecee;
     display: inline-block;
+    z-index: 2;
 }
 .top-menu li{
     display:inline-block;
     position: relative;
 }
 .top-menu a{
-    padding: 15px;
+    padding: 17px 15px;
 }
 .top-menu > li + li:after {
     content: "";
@@ -72,15 +73,53 @@ h1, h2, h3, h4, h5 ,h6{
     height: 100%;
     width: 1px;
 }
-.top-menu li:hover{
+.top-menu a:hover{
     color: #E45B0A;
     text-shadow: 0 0 0.2em #E45B0A;
+    background-color: #2F2F2F;
 }
 .mobile-top-menu{
     float:right;
     color: #f2ecee;
     padding: 15px;
     display: none;
+}
+.login-form{
+    position: absolute;
+    top: -140px;
+    padding: 10px 25px 10px 10px;
+    width: 180px;
+    background-color: #2F2F2F;
+    z-index: 1;
+    margin-left: 15px;
+}
+.login-input-fields{
+    margin: 0 auto;
+    display: block;
+    width: 95%;
+    margin-bottom: 5px;
+}
+.login-btn{
+    margin: 0 auto;
+    display: block;
+    border: 1px #E45B0A;
+    width: 99%;
+    background-color: #E45B0A;
+    color: #f2ecee;
+    font-weight: bold;
+}
+.is-visible {
+    top: 53px;
+    transition: top 0.3s;
+}
+.is-hidden {
+    top: -140px;
+    transition: top 0.3s;
+}
+.active-menu-btn {
+    color: #E45B0A;
+    text-shadow: 0 0 0.2em #E45B0A;
+    background-color: #2F2F2F;
 }
 /*
 * ========
