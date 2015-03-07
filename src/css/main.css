@@ -1,52 +1,4 @@
-/* media-screen max-width 2400px - if this is added outside
- media screen - the  displays are preserved in lower res*/
-@media screen and (max-width: 2400px){
-    .mobile-top-menu{
-        display: none;
-    }
-    .top-menu {
-        display: inline-block;
-    }
-    .left-content{
-        width: 66%;
-    }
-    .right-content{
-        width: 27.8%;
-        display:inline-block;
-    }
-}
-@media screen and (max-width: 980px){
-    .container{
-        width: 540px;
-    }
-    .left-content{
-        width: 62%;
-    }
-    .right-content{
-        width: 26.8%;
-    }
-}
-@media screen and (max-width: 540px){
-    .container{
-        width: 320px;
-    }
-    .top-menu a, li{
-        display: none;
-    }
-    .top-menu {
-        display: none;
-    }
-    .mobile-top-menu{
-        display: block;
-        visibility: visible;
-    }
-    .left-content{
-        width: 90%;
-    }
-    .right-content{
-        display:none;
-    }
-}
+
 /*
 * ========
 * GENERAL
@@ -73,6 +25,9 @@ h1, h2, h3, h4, h5 ,h6{
     width: 980px;
     margin: 0 auto;
 }
+.clear-both{
+    clear: both;
+}
 /*
 * ========
 * HEADER
@@ -89,16 +44,18 @@ h1, h2, h3, h4, h5 ,h6{
     font-size: 20px;
     padding: 15px;
     font-weight: bold;
-    color: #f2ecee;
+    color: #FA650B;
     cursor: pointer;
     width: 100px;
     display:inline-block;
+    text-shadow: 0 0 0.2em #E45B0A;
 }
 .top-menu{
     list-style: none;
     float:right;
     padding: 0;
     color: #f2ecee;
+    display: inline-block;
 }
 .top-menu li{
     display:inline-block;
@@ -117,11 +74,13 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .top-menu li:hover{
     color: #E45B0A;
+    text-shadow: 0 0 0.2em #E45B0A;
 }
 .mobile-top-menu{
     float:right;
     color: #f2ecee;
     padding: 15px;
+    display: none;
 }
 /*
 * ========
@@ -129,28 +88,65 @@ h1, h2, h3, h4, h5 ,h6{
 * ========
 */
 .content-container{
-    border:1px solid #CACACA;
     margin-bottom: 25px;
 }
 .left-content{
+    border:1px solid #CACACA;
     display: inline-block;
-    /*width: 680px;*/
-    /*width: 66%;*/
-    min-height: 560px;
     padding: 15px;
     background-color: #F8F8F8;
     float:left;
+    margin: 0 25px 25px 0;
+    width: 63.3%;
 }
 .right-content{
-    /*display: inline-block;*/
-    /*width: 27%;*/
-    /*width: 235px;*/
-    min-height: 560px;
+    float:right;
+    border:1px solid #CACACA;
     padding: 15px;
     background-color: #F0F0F0;
+    width: 26.8%;
+    display:inline-block;
 }
 /*
 * ========
 *
 * ========
 */
+
+/*
+* ========
+* RESOLUTIONS
+* ========
+*/
+@media screen and (max-width: 980px){
+    .container{
+        width: 540px;
+    }
+    .left-content{
+        width: 57%;
+    }
+    .right-content{
+        width: 25.8%;
+    }
+}
+@media screen and (max-width: 540px){
+    .container{
+        width: 320px;
+    }
+    .top-menu a, li{
+        display: none;
+    }
+    .top-menu {
+        display: none;
+    }
+    .mobile-top-menu{
+        display: block;
+        visibility: visible;
+    }
+    .left-content{
+        width: 90%;
+    }
+    .right-content{
+        display:none;
+    }
+}

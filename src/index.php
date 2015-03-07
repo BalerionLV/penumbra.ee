@@ -29,6 +29,7 @@
         </div>
         <div class="left-content">
             <h2>ANOTHER HEADING</h2>
+            <?php echo date("Y/m/d"); ?>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
