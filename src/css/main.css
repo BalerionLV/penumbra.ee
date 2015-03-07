@@ -1,10 +1,13 @@
 body{
-    padding: 0;
+    padding: 80px 0 0 0;
     margin: 0;
 }
 a{
     text-decoration: none;
     color: inherit;
+}
+h1, h2, h3, h4, h5 ,h6{
+    margin: 0;
 }
 .dark-bg{
     background-color: #3F3C3D;
@@ -23,10 +26,23 @@ a{
     .top-menu {
         display: inline-block;
     }
+    .left-content{
+        width: 66%;
+    }
+    .right-content{
+        width: 27.8%;
+        display:inline-block;
+    }
 }
 @media screen and (max-width: 980px){
     .container{
         width: 540px;
+    }
+    .left-content{
+        width: 62%;
+    }
+    .right-content{
+        width: 26.8%;
     }
 }
 @media screen and (max-width: 540px){
@@ -42,6 +58,12 @@ a{
     .mobile-top-menu{
         display: block;
         visibility: visible;
+    }
+    .left-content{
+        width: 90%;
+    }
+    .right-content{
+        display:none;
     }
 }
 /*
@@ -92,6 +114,32 @@ a{
     float:right;
     color: #f2ecee;
     padding: 15px;
+}
+/*
+* ========
+* BLOG-CONTENT
+* ========
+*/
+.content-container{
+    border:1px solid #BCBCBC;
+    margin-bottom: 25px;
+}
+.left-content{
+    display: inline-block;
+    /*width: 680px;*/
+    /*width: 66%;*/
+    min-height: 560px;
+    padding: 15px;
+    background-color: #F8F8F8;
+    float:left;
+}
+.right-content{
+    /*display: inline-block;*/
+    /*width: 27%;*/
+    /*width: 235px;*/
+    min-height: 560px;
+    padding: 15px;
+    background-color: #F0F0F0;
 }
 /*
 * ========
