@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5 ,h6{
     cursor: pointer;
     width: 100px;
     display:inline-block;
-    text-shadow: 0 0 0.2em #E45B0A;
+    text-shadow: 0 0 0.1em #E45B0A;
 }
 .top-menu{
     list-style: none;
@@ -272,12 +272,12 @@ h1, h2, h3, h4, h5 ,h6{
 .landing-show-info{
     position: absolute;
     bottom: 45%;
-    left: 2%;
+    transition: left 0.4s, 0.4s;
 }
 .landing-prerequisites{
     position: absolute;
     bottom: 25%;
-    right: 2%;
+    transition: right 0.4s, 0.4s;
 }
 /* hidden */
 .landing-descr-controls-container{
@@ -289,16 +289,29 @@ h1, h2, h3, h4, h5 ,h6{
     line-height: 10px;
     height: 15px;
     cursor:pointer;
-    font-size: 12px;
-    border: 1px solid #676D6C;
+    font-size: 14px;
+    bordeR: none;
     color: #DCE2E2;
-    background-color: rgba(156,159,159, 0.6);
+    text-shadow: 0 0 0.1em #DCE2E2;
+    background-color: rgba(156,159,159, 0);
  }
 .landing-controls-container{
     position: absolute;
     right: 3px;
     top: 96px;
 }
+/*.left-invisible{*/
+    /*left: -30%;*/
+/*}*/
+/*.right-invisible{*/
+    /*right: 30%;*/
+/*}*/
+/*.left-visible{*/
+    /*left: 2%;*/
+/*}*/
+/*.right-visible{*/
+    /*right: 2%;*/
+/*}*/
 /*
 * ========
 * RESOLUTIONS
