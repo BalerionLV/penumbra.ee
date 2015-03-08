@@ -237,6 +237,50 @@ h1, h2, h3, h4, h5 ,h6{
 }
 /*
 * ========
+* LANDING
+* ========
+*/
+.landing-body{
+    background: url("../assets/evebg.jpg") no-repeat scroll 50% 50% / cover #000;
+    color: #f2ecee;
+    margin-top: -25px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+.landing-description{
+    margin: 25% auto 0 auto;
+    width: 350px;
+    background-color: rgba(9, 31, 30, 0.88);
+    padding: 15px;
+    border-width: 20px 3px 40px;
+    border-style: solid;
+    border-color: rgba(1, 13, 12, 0.78);
+    /*box-shadow: 0 0 45px 10px #091F1E*/
+}
+.landing-button-container{
+    margin-top: -30px;
+}
+.landing-button-container input{
+    border: 1px solid #676D6C;
+    color: #DCE2E2;
+    background-color: rgba(156,159,159, 0.6);
+}
+.landing-show-info{
+    position: absolute;
+    bottom: 45%;
+    left: 2%;
+}
+.landing-prerequisites{
+    position: absolute;
+    bottom: 25%;
+    right: 2%;
+}
+/*
+* ========
 * RESOLUTIONS
 * ========
 */
