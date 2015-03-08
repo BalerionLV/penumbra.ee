@@ -24,6 +24,8 @@ h1, h2, h3, h4, h5 ,h6{
 .container{
     width: 980px;
     margin: 0 auto;
+}
+.relative{
     position: relative;
 }
 .clear-both{
@@ -187,8 +189,9 @@ h1, h2, h3, h4, h5 ,h6{
 * ========
 */
 .video-container{
-    margin: 0 auto;
-    width: 100%;
+    background-color: #F0F0F0;
+    border:1px solid #CACACA;
+    padding: 25px 0;
 }
 .video-expander {
     display: inline-block;

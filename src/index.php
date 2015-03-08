@@ -8,7 +8,7 @@
 <body>
     <!-- HEADER -->
     <div class="menu-container dark-bg">
-        <div class="container">
+        <div class="container relative">
             <div class="banner">
                 <a href="#">ENSO corp</a>
             </div>

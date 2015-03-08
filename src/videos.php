@@ -8,7 +8,7 @@
 <body>
 <!-- HEADER -->
 <div class="menu-container dark-bg">
-    <div class="container">
+    <div class="container relative">
         <div class="banner">
             <a href="#">ENSO corp</a>
         </div>
@@ -35,13 +35,15 @@
 </div>
 <!-- CONTENT -->
 <div class="container content-container">
-    <div class="corporation-videos video-expander">
-        <h3>CORPORATION VIDEOS</h3>
+    <div class="video-container">
+        <div class="corporation-videos video-expander">
+            <h3>CORPORATION VIDEOS</h3>
+        </div>
+        <div class="alliance-videos video-expander">
+            <h3>ALLIANCE VIDEOS</h3>
+        </div>
+        <div class="clear-both"></div>
     </div>
-    <div class="alliance-videos video-expander">
-        <h3>ALLIANCE VIDEOS</h3>
-    </div>
-    <div class="clear-both"></div>
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
