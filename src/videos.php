@@ -10,10 +10,10 @@
 <div class="menu-container dark-bg">
     <div class="container relative">
         <div class="banner">
-            <a href="landing.html">ENSO corp</a>
+            <a href="index.html">ENSO corp</a>
         </div>
         <ul class="top-menu">
-            <li><a href="index.php">Blog</a></li>
+            <li><a href="blog.php">Blog</a></li>
             <li><a href="videos.php">Videos</a></li>
             <li><a id="kb-btn" href="#">Killboard</a></li>
             <li><a id="login-btn" href="#">Login</a></li>
