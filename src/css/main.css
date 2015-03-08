@@ -284,7 +284,24 @@ h1, h2, h3, h4, h5 ,h6{
 * RESOLUTIONS
 * ========
 */
+@media screen and (max-width: 1920px){
+    .landing-show-info{
+        left: 8%;
+    }
+    .landing-prerequisites{
+        right: 8%;
+    }
+}
+@media screen and (max-width: 1420px){
+    .landing-show-info{
+        left: 2%;
+    }
+    .landing-prerequisites{
+        right: 2%;
+    }
+}
 @media screen and (max-width: 980px){
+
     .container{
         width: 540px;
     }
