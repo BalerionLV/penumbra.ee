@@ -211,24 +211,29 @@ h1, h2, h3, h4, h5 ,h6{
     padding: 25px 0;
 }
 .video-expander {
-    display: inline-block;
     width: 40%;
-    height: 120px;
+    height: 90px;
     background-color: #E45B0A;
     color: #f2ecee;
     text-align: center;
-    line-height: 120px;
+    line-height: 90px;
     border-radius: 15px;
+    cursor: pointer;
 }
-.corporation-videos{
+.corp-videos-contracted{
     float:left;
     margin-left: 75px;
-    cursor: pointer;
 }
-.alliance-videos{
+.alliance-videos-contracted{
     float:right;
     margin-right: 75px;
-    cursor: pointer;
+}
+.videos-open{
+    width: 90%;
+    margin: 0 auto;
+}
+.videos-invisible{
+    display: none;
 }
 /*
 * ========

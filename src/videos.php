@@ -36,10 +36,10 @@
 <!-- CONTENT -->
 <div class="container content-container">
     <div class="video-container">
-        <div class="corporation-videos video-expander">
+        <div id="corp-videos" class="corp-videos-contracted video-expander">
             <h3>CORPORATION VIDEOS</h3>
         </div>
-        <div class="alliance-videos video-expander">
+        <div id="alliance-videos" class="alliance-videos-contracted video-expander">
             <h3>ALLIANCE VIDEOS</h3>
         </div>
         <div class="clear-both"></div>

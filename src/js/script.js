@@ -70,9 +70,11 @@ blog = {
     rightCon: $('.right-content'),
     rightExp: 'right-expanded',
     rightContr: 'right-contracted',
+
     leftCon: $('.left-content'),
     leftExp: 'left-expanded',
     leftContr: 'left-contracted',
+
     toggler: 1,
     contractRight: function(){
         this.rightCon.addClass(this.rightContr)
@@ -101,6 +103,63 @@ blog.rightCon.on({
             blog.expandRight();
         } else {
             blog.contractRight();
+        }
+    }
+});
+
+video = {
+    corpToggler: 0,
+    allianceToggler: 0,
+    allianceVideos: $('#alliance-videos'),
+    corporationVideos: $('#corp-videos'),
+    videosOpen: 'videos-open',
+    videosInvisible: 'videos-invisible',
+    corpContracted: 'corp-videos-contracted',
+    allianceContracted: 'alliance-videos-contracted',
+    openCorp: function(){
+        this.corporationVideos.addClass(this.videosOpen)
+                              .removeClass(this.corpContracted);
+        this.allianceVideos.addClass(this.videosInvisible)
+                           .removeClass(this.allianceContracted);
+    },
+    closeCorp: function(){
+        this.corporationVideos.removeClass(this.videosOpen)
+                              .addClass(this.corpContracted);
+        this.allianceVideos.addClass(this.allianceContracted)
+                           .removeClass(this.videosInvisible);
+    },
+    openAlliance: function(){
+        this.allianceVideos.addClass(this.videosOpen)
+                           .removeClass(this.allianceContracted);
+        this.corporationVideos.addClass(this.videosInvisible)
+                              .removeClass(this.corpContracted);
+    },
+    closeAlliance: function(){
+        this.allianceVideos.removeClass(this.videosOpen)
+                           .addClass(this.allianceContracted);
+        this.corporationVideos.addClass(this.corpContracted)
+                              .removeClass(this.videosInvisible);
+    }
+};
+video.corporationVideos.on({
+    click: function(){
+        if(video.corpToggler == 0){
+            video.openCorp();
+            video.corpToggler = 1;
+        } else {
+            video.closeCorp();
+            video.corpToggler = 0;
+        }
+    }
+});
+video.allianceVideos.on({
+    click: function(){
+        if(video.allianceToggler == 0){
+            video.openAlliance();
+            video.allianceToggler = 1;
+        } else {
+            video.closeAlliance();
+            video.allianceToggler = 0;
         }
     }
 });
