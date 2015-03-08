@@ -35,7 +35,7 @@
         </div>
         <div class="left-content">
             <h2>ANOTHER HEADING</h2>
-            <?php session_start(); if(isset($_SESSION)){var_dump($_SESSION["username"]);} echo date("Y/m/d"); ?>
+            <?php session_start(); if(isset($_SESSION["username"])){var_dump($_SESSION["username"]);} echo date("Y/m/d"); ?>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
