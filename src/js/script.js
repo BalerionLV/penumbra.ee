@@ -113,7 +113,7 @@ video = {
     allianceVideos: $('#alliance-videos'),
     corporationVideos: $('#corp-videos'),
     videosOpen: 'videos-open',
-    videosInvisible: 'videos-invisible',
+    videosInvisible: 'invisible',
     corpContracted: 'corp-videos-contracted',
     allianceContracted: 'alliance-videos-contracted',
     openCorp: function(){
@@ -160,6 +160,63 @@ video.allianceVideos.on({
         } else {
             video.closeAlliance();
             video.allianceToggler = 0;
+        }
+    }
+});
+
+landing = {
+    infoToggler: 0,
+    preToggler: 0,
+    closeInfoBtn: $('#closeInfoBtn'),
+    closePreBtn: $('#closePreBtn'),
+    showInfoBtn: $('#showInfoBtn'),
+    showPreBtn: $('#showPreBtn'),
+    infoBox: $('.landing-show-info'),
+    preBox: $('.landing-prerequisites'),
+    invisible: 'invisible',
+    closeInfo: function(){
+        this.infoBox.addClass(this.invisible);
+        this.infoToggler = 0;
+    },
+    closePre: function(){
+        this.preBox.addClass(this.invisible);
+        this.preToggler = 0;
+    },
+    showInfo: function(){
+        this.infoBox.removeClass(this.invisible);
+        this.infoToggler = 1;
+    },
+    showPre: function(){
+        this.preBox.removeClass(this.invisible);
+        this.preToggler = 1;
+    }
+};
+
+landing.closeInfoBtn.on({
+    click: function(){
+        landing.closeInfo();
+    }
+});
+landing.closePreBtn.on({
+    click: function(){
+        landing.closePre();
+    }
+});
+landing.showInfoBtn.on({
+    click: function(){
+        if(landing.infoToggler == 0){
+            landing.showInfo();
+        } else {
+            landing.closeInfo();
+        }
+    }
+});
+landing.showPreBtn.on({
+    click: function(){
+        if(landing.preToggler == 0){
+            landing.showPre();
+        } else {
+            landing.closePre();
         }
     }
 });

@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5 ,h6{
     width: 90%;
     margin: 0 auto;
 }
-.videos-invisible{
+.invisible {
     display: none;
 }
 /*
@@ -259,12 +259,12 @@ h1, h2, h3, h4, h5 ,h6{
     border-width: 20px 3px 40px;
     border-style: solid;
     border-color: rgba(1, 13, 12, 0.78);
-    /*box-shadow: 0 0 45px 10px #091F1E*/
 }
 .landing-button-container{
     margin-top: -30px;
 }
 .landing-button-container input{
+    cursor: pointer;
     border: 1px solid #676D6C;
     color: #DCE2E2;
     background-color: rgba(156,159,159, 0.6);
@@ -278,6 +278,26 @@ h1, h2, h3, h4, h5 ,h6{
     position: absolute;
     bottom: 25%;
     right: 2%;
+}
+/* hidden */
+.landing-descr-controls-container{
+    display: none;
+    margin-left: 357px;
+    margin-top: -381px;
+}
+.landing-controls-close{
+    line-height: 10px;
+    height: 15px;
+    cursor:pointer;
+    font-size: 12px;
+    border: 1px solid #676D6C;
+    color: #DCE2E2;
+    background-color: rgba(156,159,159, 0.6);
+ }
+.landing-controls-container{
+    position: absolute;
+    right: 3px;
+    top: 96px;
 }
 /*
 * ========

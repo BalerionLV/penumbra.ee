@@ -50,12 +50,18 @@
                 daily, as a kind of Spiritual Practice.”
             </div>
             <div class="landing-button-container">
-                <input type="button" value="Show info">
-                <input type="button" value="Prerequisites">
+                <input id="showInfoBtn" type="button" value="Show info">
+                <input id="showPreBtn" type="button" value="Prerequisites">
+            </div>
+            <div class="landing-descr-controls-container">
+                <input class="landing-controls-close" type="button" value="x">
             </div>
         </div>
 
-        <div class="landing-show-info">
+        <div class="landing-show-info invisible">
+            <div class="landing-controls-container">
+                <input id="closeInfoBtn" class="landing-controls-close" type="button" value="x">
+            </div>
             <div class="landing-description">
                 The ensō is a circular symbol often referred to as “The Zen Circle“.
                 The word itself simply translates to “circle” in Japanese; however,
@@ -71,7 +77,10 @@
             </div>
         </div>
 
-        <div class="landing-prerequisites">
+        <div class="landing-prerequisites invisible">
+            <div class="landing-controls-container">
+                <input id="closePreBtn" class="landing-controls-close" type="button" value="x">
+            </div>
             <div class="landing-description">
                 The ensō is a circular symbol often referred to as “The Zen Circle“.
                 The word itself simply translates to “circle” in Japanese; however,
