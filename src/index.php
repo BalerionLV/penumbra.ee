@@ -16,11 +16,12 @@
                 <li><a href="#">Blog</a></li>
                 <li><a href="https://zkillboard.com/corporation/98268576/">Killboard</a></li>
                 <li><a class="login-hover-btn" href="#">Login</a></li>
-                    <div class="login-form">
-                        <input class="login-input-fields" type="text" placeholder="Login">
-                        <input class="login-input-fields" type="password" placeholder="Password">
-                        <input class="login-btn" type="button" value="Enter">
-                    </div>
+                    <form action="backend/login.php" id="login-form" method="post" accept-charset="UTF-8" class="login-form">
+
+                        <input class="login-input-fields" type="text" placeholder="Username" maxlength="15" name="username">
+                        <input class="login-input-fields" type="password" placeholder="Password" maxlength="25" name="password">
+                        <input class="login-btn" type="submit" value="Enter" name="enter">
+                    </form>
             </ul>
             <div class="mobile-top-menu">
                 -MENU-
@@ -34,7 +35,7 @@
         </div>
         <div class="left-content">
             <h2>ANOTHER HEADING</h2>
-            <?php echo date("Y/m/d"); ?>
+            <?php session_start(); if(isset($_SESSION)){var_dump($_SESSION["username"]);} echo date("Y/m/d"); ?>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
