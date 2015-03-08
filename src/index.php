@@ -35,10 +35,10 @@
     </div>
     <!-- CONTENT -->
     <div class="container content-container">
-        <div class="right-content">
+        <div class="right-content right-contracted">
             <h4>Recent posts</h4>
         </div>
-        <div class="left-content">
+        <div class="left-content left-expanded">
             <h2>ANOTHER HEADING</h2>
             <?php session_start(); if(isset($_SESSION["username"])){var_dump($_SESSION["username"]);} echo date("Y/m/d"); ?>
             <p>
@@ -51,7 +51,7 @@
                 software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
         </div>
-        <div class="left-content">
+        <div class="left-content left-expanded">
             <h2>SOME HEADING</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -63,7 +63,7 @@
                 software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
         </div>
-        <div class="left-content">
+        <div class="left-content left-expanded">
             <h2>SOME HEADING</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.

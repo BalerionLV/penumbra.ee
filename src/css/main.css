@@ -102,10 +102,9 @@ h1, h2, h3, h4, h5 ,h6{
 .login-form{
     position: absolute;
     top: -140px;
-    padding: 10px 25px 10px 10px;
+    padding: 10px;
     width: 180px;
     background-color: #2F2F2F;
-    margin-left: 15px;
 }
 .login-input-fields{
     margin: 0 auto;
@@ -182,6 +181,22 @@ h1, h2, h3, h4, h5 ,h6{
     background-color: #F0F0F0;
     width: 26.8%;
     display:inline-block;
+}
+.right-expanded{
+    width: 26.8%;
+    transition: left 0.3s, 0.3s;
+}
+.right-contracted{
+    width: 3.8%;
+    transition: right 0.3s, 0.3s;
+}
+.left-expanded{
+    width: 86.3%;
+    transition: right 0.3s, 0.3s;
+}
+.left-contracted{
+    width: 63.3%;
+    transition: left 0.3s, 0.3s;
 }
 /*
 * ========
