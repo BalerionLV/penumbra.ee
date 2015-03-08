@@ -185,10 +185,12 @@ h1, h2, h3, h4, h5 ,h6{
 .right-expanded{
     width: 26.8%;
     transition: left 0.3s, 0.3s;
+    cursor: pointer;
 }
 .right-contracted{
     width: 3.8%;
     transition: right 0.3s, 0.3s;
+    cursor: pointer;
 }
 .left-expanded{
     width: 86.3%;
