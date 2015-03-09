@@ -306,4 +306,4 @@ landing.showApplyBtn.on({
             landing.closeApply();
         }
     }
-})
+});
