@@ -292,6 +292,10 @@ h1, h2, h3, h4, h5 ,h6{
     position: absolute;
     bottom: 31%;
 }
+.landing-apply{
+    position: absolute;
+    bottom: 58%;
+}
 .requirements-landing {
     text-align: left;
 }
@@ -314,7 +318,16 @@ h1, h2, h3, h4, h5 ,h6{
 .landing-controls-container{
     position: absolute;
     right: -1px;
-    top: 76px;
+    top: 77px;
+}
+.landing-looking-for{
+    position: absolute;
+    bottom: 24%;
+}
+.landing-controls-container-large{
+    position: absolute;
+    right: -1px;
+    top: 95px;
 }
 .left-invisible{
     visibility: hidden;
@@ -332,6 +345,10 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .right-visible{
     right: 7%;
+    transition: right 0.4s;
+}
+.right-apply-visible{
+    right: 14%;
     transition: right 0.4s;
 }
 /*

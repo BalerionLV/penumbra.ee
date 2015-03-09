@@ -170,23 +170,33 @@ video.allianceVideos.on({
 landing = {
     infoToggler: 0,
     preToggler: 0,
+    lookingToggler: 0,
+    applyToggler: 0,
 
     logo: $('.landing-logo-container'),
 
     closeInfoBtn: $('#closeInfoBtn'),
     closePreBtn: $('#closePreBtn'),
+    closeLookingBtn: $('#close-looking-btn'),
+    closeApplyBtn: $('#close-apply-btn'),
+
     showInfoBtn: $('#showInfoBtn'),
     showPreBtn: $('#showPreBtn'),
+    showLookingBtn: $('#looking-for-button'),
+    showApplyBtn: $('#apply-button-landing'),
 
     infoBox: $('.landing-show-info'),
     preBox: $('.landing-prerequisites'),
     descrBox: $('.landing-descr-container'),
+    lookingForBox: $('.landing-looking-for'),
+    applyBox: $('.landing-apply'),
 
     invisible: 'invisible',
     leftInvisible: 'left-invisible',
     leftVisible: 'left-visible',
     rightInvisible: 'right-invisible',
     rightVisible: 'right-visible',
+    rightApplyVisible: 'right-apply-visible',
     closeInfo: function(){
         this.infoBox.addClass(this.leftInvisible);
         this.infoBox.removeClass(this.leftVisible);
@@ -201,11 +211,35 @@ landing = {
         this.infoBox.removeClass(this.leftInvisible);
         this.infoBox.addClass(this.leftVisible);
         this.infoToggler = 1;
+        this.closeLookingFor();
     },
     showPre: function(){
         this.preBox.removeClass(this.rightInvisible);
         this.preBox.addClass(this.rightVisible);
         this.preToggler = 1;
+        this.closeApply();
+    },
+    showLookingFor: function(){
+        this.closeInfo();
+        this.lookingForBox.removeClass(this.leftInvisible);
+        this.lookingForBox.addClass(this.leftVisible);
+        this.lookingToggler = 1;
+    },
+    closeLookingFor: function(){
+        this.lookingForBox.addClass(this.leftInvisible);
+        this.lookingForBox.removeClass(this.leftVisible);
+        this.lookingToggler = 0;
+    },
+    showApply: function(){
+        this.closePre();
+        this.applyBox.addClass(this.rightApplyVisible);
+        this.applyBox.removeClass(this.rightInvisible);
+        this.applyToggler = 1;
+    },
+    closeApply: function(){
+        this.applyBox.removeClass(this.rightApplyVisible);
+        this.applyBox.addClass(this.rightInvisible);
+        this.applyToggler = 0;
     }
 };
 landing.descrBox.hide();
@@ -227,6 +261,16 @@ landing.closePreBtn.on({
         landing.closePre();
     }
 });
+landing.closeLookingBtn.on({
+    click: function(){
+        landing.closeLookingFor();
+    }
+});
+landing.closeApplyBtn.on({
+    click: function(){
+        landing.closeApply();
+    }
+});
 landing.showInfoBtn.on({
     click: function(){
         if(landing.infoToggler == 0){
@@ -245,3 +289,21 @@ landing.showPreBtn.on({
         }
     }
 });
+landing.showLookingBtn.on({
+    click: function(){
+        if(landing.lookingToggler == 0){
+            landing.showLookingFor();
+        } else {
+            landing.closeLookingFor();
+        }
+    }
+});
+landing.showApplyBtn.on({
+    click: function(){
+        if(landing.applyToggler == 0){
+            landing.showApply();
+        } else {
+            landing.closeApply();
+        }
+    }
+})
