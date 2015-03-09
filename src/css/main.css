@@ -266,6 +266,15 @@ h1, h2, h3, h4, h5 ,h6{
     border-style: solid;
     border-color: rgba(1, 13, 12, 0.78);
 }
+.landing-description-small{
+    margin: 25% auto 0 auto;
+    width: 280px;
+    background-color: rgba(9, 31, 30, 0.88);
+    padding: 15px;
+    border-width: 20px 3px 40px;
+    border-style: solid;
+    border-color: rgba(1, 13, 12, 0.78);
+}
 .landing-button-container{
     margin-top: -30px;
 }
@@ -282,6 +291,9 @@ h1, h2, h3, h4, h5 ,h6{
 .landing-prerequisites{
     position: absolute;
     bottom: 31%;
+}
+.requirements-landing {
+    text-align: left;
 }
 /* hidden */
 .landing-descr-controls-container{
@@ -301,8 +313,8 @@ h1, h2, h3, h4, h5 ,h6{
  }
 .landing-controls-container{
     position: absolute;
-    right: 3px;
-    top: 96px;
+    right: -1px;
+    top: 76px;
 }
 .left-invisible{
     visibility: hidden;
