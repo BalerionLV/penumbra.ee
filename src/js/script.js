@@ -1,6 +1,9 @@
 /**
- * Created by Hachiko on 2015.03.07..
- */
+* Created by Hachiko on 2015.03.07..
+*/
+/** wrap in fun */
+$(function(){
+});
 menu = {
     loginToggler: 0,
     kbToggler: 0,
@@ -167,30 +170,52 @@ video.allianceVideos.on({
 landing = {
     infoToggler: 0,
     preToggler: 0,
+
+    logo: $('.landing-logo-container'),
+
     closeInfoBtn: $('#closeInfoBtn'),
     closePreBtn: $('#closePreBtn'),
     showInfoBtn: $('#showInfoBtn'),
     showPreBtn: $('#showPreBtn'),
+
     infoBox: $('.landing-show-info'),
     preBox: $('.landing-prerequisites'),
+    descrBox: $('.landing-descr-container'),
+
     invisible: 'invisible',
+    leftInvisible: 'left-invisible',
+    leftVisible: 'left-visible',
+    rightInvisible: 'right-invisible',
+    rightVisible: 'right-visible',
     closeInfo: function(){
-        this.infoBox.addClass(this.invisible);
+        this.infoBox.addClass(this.leftInvisible);
+        this.infoBox.removeClass(this.leftVisible);
         this.infoToggler = 0;
     },
     closePre: function(){
-        this.preBox.addClass(this.invisible);
+        this.preBox.addClass(this.rightInvisible);
+        this.preBox.removeClass(this.rightVisible);
         this.preToggler = 0;
     },
     showInfo: function(){
-        this.infoBox.removeClass(this.invisible);
+        this.infoBox.removeClass(this.leftInvisible);
+        this.infoBox.addClass(this.leftVisible);
         this.infoToggler = 1;
     },
     showPre: function(){
-        this.preBox.removeClass(this.invisible);
+        this.preBox.removeClass(this.rightInvisible);
+        this.preBox.addClass(this.rightVisible);
         this.preToggler = 1;
     }
 };
+landing.descrBox.hide();
+
+landing.logo.on('click', function(){
+    landing.logo.fadeOut("slow");
+    return $.when().done(function(){
+        landing.descrBox.delay(1000).fadeIn("slow");
+    })
+});
 
 landing.closeInfoBtn.on({
     click: function(){

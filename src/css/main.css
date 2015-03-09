@@ -127,7 +127,8 @@ h1, h2, h3, h4, h5 ,h6{
     transition: top 0.3s;
 }
 .is-hidden-login {
-    top: -140px;
+    visibility: hidden;
+    top: 24px;
     right: 0;
     transition: top 0.3s;
 }
@@ -142,7 +143,6 @@ h1, h2, h3, h4, h5 ,h6{
     display: block;
     position: absolute;
     right: 73px;
-    top: -140px;
     padding: 10px;
     background-color: #2F2F2F;
     margin-left: 15px;
@@ -153,7 +153,8 @@ h1, h2, h3, h4, h5 ,h6{
     transition: top 0.3s;
 }
 .is-hidden-kb {
-    top: -140px;
+    visibility: hidden;
+    top: 24px;
     right: 73px;
     transition: top 0.3s;
 }
@@ -251,6 +252,11 @@ h1, h2, h3, h4, h5 ,h6{
     bottom: 0;
     text-align: center;
 }
+.landing-logo-container{
+    margin: 25% auto 0 auto;
+    cursor: pointer;
+    width: 255px;
+}
 .landing-description{
     margin: 25% auto 0 auto;
     width: 350px;
@@ -272,12 +278,10 @@ h1, h2, h3, h4, h5 ,h6{
 .landing-show-info{
     position: absolute;
     bottom: 45%;
-    transition: left 0.4s, 0.4s;
 }
 .landing-prerequisites{
     position: absolute;
-    bottom: 25%;
-    transition: right 0.4s, 0.4s;
+    bottom: 31%;
 }
 /* hidden */
 .landing-descr-controls-container{
@@ -300,39 +304,45 @@ h1, h2, h3, h4, h5 ,h6{
     right: 3px;
     top: 96px;
 }
-/*.left-invisible{*/
-    /*left: -30%;*/
-/*}*/
-/*.right-invisible{*/
-    /*right: 30%;*/
-/*}*/
-/*.left-visible{*/
-    /*left: 2%;*/
-/*}*/
-/*.right-visible{*/
-    /*right: 2%;*/
-/*}*/
+.left-invisible{
+    visibility: hidden;
+    left: -15%;
+    transition: left 0.4s;
+}
+.right-invisible{
+    visibility: hidden;
+    right: 0;
+    transition: right 0.4s;
+}
+.left-visible{
+    left: 8%;
+    transition: left 0.4s;
+}
+.right-visible{
+    right: 7%;
+    transition: right 0.4s;
+}
 /*
 * ========
 * RESOLUTIONS
 * ========
 */
-@media screen and (max-width: 1920px){
-    .landing-show-info{
-        left: 8%;
-    }
-    .landing-prerequisites{
-        right: 8%;
-    }
-}
-@media screen and (max-width: 1420px){
-    .landing-show-info{
-        left: 2%;
-    }
-    .landing-prerequisites{
-        right: 2%;
-    }
-}
+/*@media screen and (max-width: 1920px){*/
+    /*.landing-show-info{*/
+        /*left: 8%;*/
+    /*}*/
+    /*.landing-prerequisites{*/
+        /*right: 8%;*/
+    /*}*/
+/*}*/
+/*@media screen and (max-width: 1420px){*/
+    /*.landing-show-info{*/
+        /*left: 2%;*/
+    /*}*/
+    /*.landing-prerequisites{*/
+        /*right: 2%;*/
+    /*}*/
+/*}*/
 @media screen and (max-width: 980px){
 
     .container{

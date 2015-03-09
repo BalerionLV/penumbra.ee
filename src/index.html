@@ -22,7 +22,7 @@
                     <input class="login-input-fields" type="password" placeholder="Password" maxlength="25" name="password">
                     <input class="login-btn" type="submit" value="Enter" name="enter">
                 </form>
-                <ul id="killboard-menu" class="killboard-menu">
+                <ul id="killboard-menu" class="killboard-menu is-hidden-kb">
                     <li><a href="https://zkillboard.com/corporation/98268576/" target="_blank">zKillboard</a></li>
                     <li><a href="http://eve-kill.net/?a=corp_detail&crp_id=359700" target="_blank">EVE-Kill</a></li>
                     <li><a href="http://eve.battleclinic.com/killboard/combat_record.php?name=Enso+Corp&type=corporation" target="_blank">Battleclinic</a></li>
@@ -36,29 +36,34 @@
     <!-- LANDING BODY -->
     <div class="landing-body">
         <div class="container">
-            <div class="landing-description">
-                The ensō is a circular symbol often referred to as “The Zen Circle“.
-                The word itself simply translates to “circle” in Japanese; however,
-                it embodies one of the defining aspects of Zen Buddhism, no-mind.
-                A state of no-mind is where a person is free from thoughts and emotions
-                while being completely present in the now. It is believed that while in
-                this state of total presence, true creativity can arise. Creating the zen
-                circle is often done standing, so as to utilize the entire body for the expression
-                of the brush stroke. Some Zen Buddhists “believe that the character of the artist
-                is fully exposed in how she or he draws an ensō. Only a person who is mentally and
-                spiritually complete can draw a true ensō. Some artists will practice drawing an ensō
-                daily, as a kind of Spiritual Practice.”
+            <div class="landing-logo-container">
+                <img src="assets/gallente.png">
             </div>
-            <div class="landing-button-container">
-                <input id="showInfoBtn" type="button" value="Show info">
-                <input id="showPreBtn" type="button" value="Prerequisites">
-            </div>
-            <div class="landing-descr-controls-container">
-                <input class="landing-controls-close" type="button" value="x">
+            <div class="landing-descr-container">
+                <div class="landing-description">
+                    The ensō is a circular symbol often referred to as “The Zen Circle“.
+                    The word itself simply translates to “circle” in Japanese; however,
+                    it embodies one of the defining aspects of Zen Buddhism, no-mind.
+                    A state of no-mind is where a person is free from thoughts and emotions
+                    while being completely present in the now. It is believed that while in
+                    this state of total presence, true creativity can arise. Creating the zen
+                    circle is often done standing, so as to utilize the entire body for the expression
+                    of the brush stroke. Some Zen Buddhists “believe that the character of the artist
+                    is fully exposed in how she or he draws an ensō. Only a person who is mentally and
+                    spiritually complete can draw a true ensō. Some artists will practice drawing an ensō
+                    daily, as a kind of Spiritual Practice.”
+                </div>
+                <div class="landing-button-container">
+                    <input id="showInfoBtn" type="button" value="Show info">
+                    <input id="showPreBtn" type="button" value="Prerequisites">
+                </div>
+                <div class="landing-descr-controls-container">
+                    <input class="landing-controls-close" type="button" value="x">
+                </div>
             </div>
         </div>
 
-        <div class="landing-show-info invisible">
+        <div class="landing-show-info left-invisible">
             <div class="landing-controls-container">
                 <input id="closeInfoBtn" class="landing-controls-close" type="button" value="x">
             </div>
@@ -77,7 +82,7 @@
             </div>
         </div>
 
-        <div class="landing-prerequisites invisible">
+        <div class="landing-prerequisites right-invisible">
             <div class="landing-controls-container">
                 <input id="closePreBtn" class="landing-controls-close" type="button" value="x">
             </div>
