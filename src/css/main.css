@@ -323,7 +323,7 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .right-invisible{
     visibility: hidden;
-    right: 0;
+    right: 7px;
     transition: right 0.4s;
 }
 .left-visible{
