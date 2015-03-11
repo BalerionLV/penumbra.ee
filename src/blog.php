@@ -22,8 +22,8 @@
                 <li><a id="login-btn" href="#">Login</a></li>
                 <?php } ?>
                 <?php if(isset($_SESSION["username"])){ ?>
-                <li><a id="logout-btn" href="backend/logout.php">Logout</a></li>
                 <li><a id="profile" href="#">Profile</a></li>
+                <li><a id="logout-btn" href="backend/logout.php">Logout</a></li>
                 <?php } ?>
                     <form action="backend/login.php" id="login-form" method="post" accept-charset="UTF-8" class="login-form is-hidden-login">
                         <input class="login-input-fields" type="text" placeholder="Username" maxlength="15" name="username">
@@ -46,46 +46,42 @@
         <div class="right-content right-contracted">
             <h4>Recent posts</h4>
         </div>
-        <div class="left-content left-expanded">
-            <h2>ANOTHER HEADING</h2>
-            <?php echo date("Y/m/d"); ?>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div>
-        <div class="left-content left-expanded">
-            <h2>SOME HEADING</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div>
-        <div class="left-content left-expanded">
-            <h2>SOME HEADING</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div>
+
+        <?php include "backend/get_article.php" ?>
+
         <div class="clear-both"></div>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/script.js"></script>
 </html>
+
+<!--
+CREATE TABLE members (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30),
+    password VARCHAR(30)
+);
+
+/* Then insert an admin for testing: */
+INSERT INTO members (username, password)
+    VALUES ('admin', '2Strong!');
+-=>
+
+<!--
+CREATE TABLE posts (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),
+    body TEXT,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+/* Then insert some posts for testing: */
+INSERT INTO posts (title, body, created)
+    VALUES ('The title', 'This is the post body.', NOW());
+INSERT INTO posts (title, body, created)
+    VALUES ('A title once again', 'And the post body follows.', NOW());
+INSERT INTO posts (title, body, created)
+    VALUES ('Title strikes back', 'This is really exciting! Not.', NOW());
+-->
