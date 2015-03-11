@@ -232,8 +232,8 @@ landing = {
     },
     showApply: function(){
         this.closePre();
-        this.applyBox.addClass(this.rightApplyVisible);
-        this.applyBox.removeClass(this.rightInvisible);
+        this.applyBox.addClass(this.rightApplyVisible)
+                     .removeClass(this.rightInvisible);
         this.applyToggler = 1;
     },
     closeApply: function(){
