@@ -1,3 +1,5 @@
+<?php include 'backend/db_connect.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -16,7 +18,13 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="videos.php">Videos</a></li>
                 <li><a id="kb-btn" href="#">Killboard</a></li>
+                <?php if(!isset($_SESSION["username"])){ ?>
                 <li><a id="login-btn" href="#">Login</a></li>
+                <?php } ?>
+                <?php if(isset($_SESSION["username"])){ ?>
+                <li><a id="logout-btn" href="backend/logout.php">Logout</a></li>
+                <li><a id="profile" href="#">Profile</a></li>
+                <?php } ?>
                     <form action="backend/login.php" id="login-form" method="post" accept-charset="UTF-8" class="login-form is-hidden-login">
                         <input class="login-input-fields" type="text" placeholder="Username" maxlength="15" name="username">
                         <input class="login-input-fields" type="password" placeholder="Password" maxlength="25" name="password">
@@ -40,7 +48,7 @@
         </div>
         <div class="left-content left-expanded">
             <h2>ANOTHER HEADING</h2>
-            <?php session_start(); if(isset($_SESSION["username"])){var_dump($_SESSION["username"]);} echo date("Y/m/d"); ?>
+            <?php echo date("Y/m/d"); ?>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
