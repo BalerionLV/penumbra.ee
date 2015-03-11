@@ -258,7 +258,16 @@ h1, h2, h3, h4, h5 ,h6{
     width: 255px;
 }
 .landing-description{
-    margin: 25% auto 0 auto;
+    margin: 20% auto 0 auto;
+    width: 350px;
+    background-color: rgba(9, 31, 30, 0.88);
+    padding: 15px;
+    border-width: 20px 3px 40px;
+    border-style: solid;
+    border-color: rgba(1, 13, 12, 0.78);
+}
+.landing-description-sides{
+    margin: auto 0 auto;
     width: 350px;
     background-color: rgba(9, 31, 30, 0.88);
     padding: 15px;
@@ -315,6 +324,11 @@ h1, h2, h3, h4, h5 ,h6{
     text-shadow: 0 0 0.1em #DCE2E2;
     background-color: rgba(156,159,159, 0);
  }
+.landing-controls-container-sides{
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
 .landing-controls-container{
     position: absolute;
     right: -1px;
@@ -323,11 +337,6 @@ h1, h2, h3, h4, h5 ,h6{
 .landing-looking-for{
     position: absolute;
     bottom: 24%;
-}
-.landing-controls-container-large{
-    position: absolute;
-    right: -1px;
-    top: 95px;
 }
 .left-invisible{
     visibility: hidden;
