@@ -2,7 +2,7 @@
     $table_name = 'posts';
 
     $sql = "SELECT id, title, body, created, modified FROM $table_name";
-    $result = $mysqli->query($sql);
+    $result = $dbc->query($sql);
     $articleCount = $result->num_rows;
 
 	if ($result->num_rows > 0) {

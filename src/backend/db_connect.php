@@ -6,8 +6,9 @@
     $dbpassword="";
     $db_name="test";
 
-    $mysqli = new mysqli("$host", "$dbusername", "$dbpassword", "$db_name");
-    if ($mysqli->connect_errno) {
+    $dbc = mysqli_connect("$host", "$dbusername", "$dbpassword", "$db_name");
+    //$mysqli = new mysqli("$host", "$dbusername", "$dbpassword", "$db_name");
+    if ($dbc->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
         exit();
     }
