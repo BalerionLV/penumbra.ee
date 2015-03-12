@@ -1,9 +1,9 @@
 /**
 * Created by Hachiko on 2015.03.07..
 */
-/** wrap in fun */
-$(function(){
-});
+///** wrap in fun */
+//$(function(){
+//});
 menu = {
     loginToggler: 0,
     kbToggler: 0,
@@ -115,46 +115,60 @@ video = {
     allianceToggler: 0,
     allianceVideos: $('#alliance-videos'),
     corporationVideos: $('#corp-videos'),
-    videosOpen: 'videos-open',
+    allianceVideosOpen: 'alliance-videos-open',
+    corpVideosOpen: 'corp-videos-open',
     videosInvisible: 'invisible',
     corpContracted: 'corp-videos-contracted',
     allianceContracted: 'alliance-videos-contracted',
     openCorp: function(){
-        this.corporationVideos.addClass(this.videosOpen)
+        this.corporationVideos.addClass(this.corpVideosOpen)
                               .removeClass(this.corpContracted);
         this.allianceVideos.addClass(this.videosInvisible)
                            .removeClass(this.allianceContracted);
     },
     closeCorp: function(){
-        this.corporationVideos.removeClass(this.videosOpen)
+        this.corporationVideos.removeClass(this.corpVideosOpen)
                               .addClass(this.corpContracted);
         this.allianceVideos.addClass(this.allianceContracted)
                            .removeClass(this.videosInvisible);
     },
     openAlliance: function(){
-        this.allianceVideos.addClass(this.videosOpen)
+        this.allianceVideos.addClass(this.allianceVideosOpen)
                            .removeClass(this.allianceContracted);
         this.corporationVideos.addClass(this.videosInvisible)
                               .removeClass(this.corpContracted);
     },
     closeAlliance: function(){
-        this.allianceVideos.removeClass(this.videosOpen)
+        this.allianceVideos.removeClass(this.allianceVideosOpen)
                            .addClass(this.allianceContracted);
         this.corporationVideos.addClass(this.corpContracted)
                               .removeClass(this.videosInvisible);
     }
 };
-video.corporationVideos.on({
-    click: function(){
-        if(video.corpToggler == 0){
-            video.openCorp();
-            video.corpToggler = 1;
-        } else {
-            video.closeCorp();
-            video.corpToggler = 0;
-        }
+video.corporationVideos.on('click', function(){
+    if(video.corpToggler == 0){
+        video.corporationVideos.removeClass('corp-videos-contracted')
+                                .addClass('corp-videos-open');
+        video.corpToggler = 1;
+
+        video.allianceVideos.removeClass('alliance-videos-contracted')
+                            .addClass('invisible');
     }
+    return $.when().done(function(){
+        video.corporationVideos.delay(2000).addClass('height');
+    })
 });
+//video.corporationVideos.on({
+//    click: function(){
+//        if(video.corpToggler == 0){
+//            video.openCorp();
+//            video.corpToggler = 1;
+//        } else {
+//            video.closeCorp();
+//            video.corpToggler = 0;
+//        }
+//    }
+//});
 video.allianceVideos.on({
     click: function(){
         if(video.allianceToggler == 0){

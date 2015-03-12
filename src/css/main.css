@@ -217,7 +217,6 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .video-expander {
     width: 40%;
-    height: 90px;
     background-color: #E45B0A;
     color: #f2ecee;
     text-align: center;
@@ -226,16 +225,32 @@ h1, h2, h3, h4, h5 ,h6{
     cursor: pointer;
 }
 .corp-videos-contracted{
+    height: 90px;
     float:left;
     margin-left: 75px;
+    transition: left 0.3s;
 }
 .alliance-videos-contracted{
+    height: 90px;
     float:right;
     margin-right: 75px;
+    transition: right 0.3s;
 }
-.videos-open{
+.alliance-videos-open{
+    height: 90px;
     width: 90%;
     margin: 0 auto;
+    transition: left 0.3s;
+}
+.corp-videos-open{
+    height: 90px;
+    width: 90%;
+    margin: 0 auto;
+    transition: right 0.5s;
+}
+.height {
+    height: 150px;
+    transition: 0.5s;
 }
 .invisible {
     display: none;
