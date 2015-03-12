@@ -11,10 +11,17 @@ $.ajax({
         console.log('Error while getting data from server!');
     },
     success: function (result) {
-            for(var i = result.length-1; i>-1; i--) {
-                var el = result.slice(i)[0];
-                something.push(el);
+        result.forEach(function(article){
+            something.push({id: article[0], title: article[1], body: article[2], created: article[3], modified: article[4]})
+        });
+        for(var i = something.length-1; i>-1; i--) {
+            var lastModified;
+            if (something[i].modified !== null){
+                lastModified = 'Modified: ' + something[i].modified;
+            } else {
+                lastModified = something[i].created;
+            }
+            $('<div class="left-content left-expanded"> <h2>'+something[i].title+'</h2><p class="time-created"><i>'+lastModified+'</i></p><p>'+something[i].body+' </p><div id="article-controls-container" class="article-controls-container"></div></div> ').appendTo('.append-content');
         }
-        console.log(something);
     }
 });

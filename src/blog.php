@@ -46,16 +46,15 @@
         <div class="right-content right-contracted">
             <h4>Recent posts</h4>
         </div>
-
-        <?php include "backend/get_article.php" ?>
-
+        <div class="append-content"></div>
+       <!--<?php include "backend/get_article.php" ?>-->
         <div class="clear-both"></div>
     </div>
 </body>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 <script src="js/jquerylib.js"></script>
-<script src="js/script.js"></script>
 <script src="js/process_article_data.js"></script>
+<script src="js/script.js"></script>
 </html>
 
 <!--
