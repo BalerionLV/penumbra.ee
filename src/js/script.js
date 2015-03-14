@@ -360,5 +360,4 @@ setInterval(function(){
     angle+=1;
     $("#image").rotate(angle);
 },50);
-
 });
