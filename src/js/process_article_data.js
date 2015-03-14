@@ -21,7 +21,9 @@ $.ajax({
             } else {
                 lastModified = something[i].created;
             }
-            $('<div class="left-content left-expanded"> <h2>'+something[i].title+'</h2><p class="time-created"><i>'+lastModified+'</i></p><p>'+something[i].body+' </p><div id="article-controls-container" class="article-controls-container"></div></div> ').appendTo('.append-content');
+            $('<div class="left-content left-expanded" data-id="'+something[i].id+'"> <h2>'+something[i].title+'</h2><p class="time-created"><i>'+lastModified+'</i></p><p>'+something[i].body+' </p><div id="article-controls-container" class="article-controls-container"></div></div> ').appendTo('.append-content');
+
+            $('<h4 data-id="'+something[i].id+'">'+something[i].title+'</h4><p class="time-created"><i>'+lastModified+'</i></p><br>').appendTo('.recent-posts');
         }
     }
 });

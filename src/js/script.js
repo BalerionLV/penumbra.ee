@@ -2,8 +2,7 @@
 * Created by Hachiko on 2015.03.07..
 */
 ///** wrap in fun */
-//$(function(){
-//});
+$(function(){
 menu = {
     loginToggler: 0,
     kbToggler: 0,
@@ -71,8 +70,10 @@ menu.kbBtn.on({
 
 blog = {
     rightCon: $('.right-content'),
+    recentPosts: $('.recent-posts'),
     rightExp: 'right-expanded',
     rightContr: 'right-contracted',
+    expanderBtn: $('.expander-btn'),
 
     leftCon: $('.left-content'),
     leftExp: 'left-expanded',
@@ -82,8 +83,11 @@ blog = {
     contractRight: function(){
         this.rightCon.addClass(this.rightContr)
                      .removeClass(this.rightExp);
-        this.leftCon.addClass(this.leftExp)
-                    .removeClass(this.leftContr);
+        $('.left-content').toggleClass(this.leftExp);
+        $('.left-content').toggleClass(this.leftContr);
+        $('.recent-posts').toggleClass('invisible-vis');
+        this.expanderBtn.toggleClass('contract-img ');
+        this.expanderBtn.find('img').attr('src', 'assets/left-arrow.png');
         this.toggler = 1;
         menu.closeLoginForm();
         menu.closeKbMenu();
@@ -91,8 +95,11 @@ blog = {
     expandRight: function(){
         this.rightCon.removeClass(this.rightContr)
                      .addClass(this.rightExp);
-        this.leftCon.removeClass(this.leftExp)
-                    .addClass(this.leftContr);
+        $('.left-content').toggleClass(this.leftExp);
+        $('.left-content').toggleClass(this.leftContr);
+        this.recentPosts.toggleClass('invisible-vis');
+        this.expanderBtn.toggleClass('contract-img ');
+        this.expanderBtn.find('img').attr('src', 'assets/right-arrow.png');
         this.toggler = 0;
         menu.closeLoginForm();
         menu.closeKbMenu();
@@ -100,7 +107,7 @@ blog = {
 };
 
 /** expand or contract blog page */
-blog.rightCon.on({
+blog.expanderBtn.on({
     click: function(){
         if(blog.toggler == 1){
             blog.expandRight();
@@ -320,4 +327,6 @@ landing.showApplyBtn.on({
             landing.closeApply();
         }
     }
+});
+
 });

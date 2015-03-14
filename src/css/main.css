@@ -178,24 +178,40 @@ h1, h2, h3, h4, h5 ,h6{
 .time-created{
     font-size: 12px;
     color: grey;
+    margin: 0;
 }
+/*.right-content{*/
+    /*float:right;*/
+    /*border:1px solid #CACACA;*/
+    /*padding: 15px;*/
+    /*background-color: #F0F0F0;*/
+    /*width: 26.8%;*/
+    /*display:inline-block;*/
+/*}*/
 .right-content{
     float:right;
+    width: 26.8%;
+    display:inline-block;
+}
+.right-expander{
     border:1px solid #CACACA;
     padding: 15px;
     background-color: #F0F0F0;
-    width: 26.8%;
-    display:inline-block;
+    display: block;
+}
+.recent-posts{
+    border:1px solid #CACACA;
+    padding: 15px;
+    background-color: #F0F0F0;
+    display: block;
 }
 .right-expanded{
     width: 26.8%;
     transition: left 0.3s, 0.3s;
-    cursor: pointer;
 }
 .right-contracted{
     width: 3.8%;
     transition: right 0.3s, 0.3s;
-    cursor: pointer;
 }
 .left-expanded{
     width: 86.3%;
@@ -204,6 +220,17 @@ h1, h2, h3, h4, h5 ,h6{
 .left-contracted{
     width: 63.3%;
     transition: left 0.3s, 0.3s;
+}
+.expander-btn {
+    background-color: #f0f0f0;
+    padding: 5px 23%;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+}
+.contract-img {
+    background-color: #f0f0f0;
+    padding: 5px 45%;
+    border: 1px solid #cacaca;
 }
 /*
 * ========
@@ -254,6 +281,9 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .invisible {
     display: none;
+}
+.invisible-vis {
+    visibility: hidden;
 }
 /*
 * ========
