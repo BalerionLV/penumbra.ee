@@ -19,7 +19,7 @@
             </div>
             <ul class="top-menu">
                 <li><a href="blog.php">Blog</a></li>
-                <li><a href="videos.php">Videos</a></li>
+                <!--<li><a href="videos.php">Videos</a></li>-->
                 <li><a id="kb-btn" href="#">Killboard</a></li>
                 <?php if(!isset($_SESSION["username"])){ ?>
                 <li><a id="login-btn" href="#">Login</a></li>
