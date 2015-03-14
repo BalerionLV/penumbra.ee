@@ -70,15 +70,15 @@ menu.kbBtn.on({
 
 $(window).scroll(function() {
     var offset = 150;
-    if (jQuery(this).scrollTop() > offset) {
-        jQuery('.back-to-top').fadeIn('fast');
+    if ($(this).scrollTop() > offset) {
+        $('.back-to-top').fadeIn('fast');
     } else {
-        jQuery('.back-to-top').fadeOut('fast');
+        $('.back-to-top').fadeOut('fast');
     }
 });
 
 $('.back-to-top').click(function() {
-    jQuery('html, body').animate({scrollTop: 0}, 'slow');
+    $('html, body').animate({scrollTop: 0}, 'slow');
 });
 
 blog = {
