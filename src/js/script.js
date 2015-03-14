@@ -68,6 +68,19 @@ menu.kbBtn.on({
     }
 });
 
+$(window).scroll(function() {
+    var offset = 150;
+    if (jQuery(this).scrollTop() > offset) {
+        jQuery('.back-to-top').fadeIn('fast');
+    } else {
+        jQuery('.back-to-top').fadeOut('fast');
+    }
+});
+
+$('.back-to-top').click(function() {
+    jQuery('html, body').animate({scrollTop: 0}, 'slow');
+});
+
 blog = {
     rightCon: $('.right-content'),
     recentPosts: $('.recent-posts'),
@@ -115,6 +128,11 @@ blog.expanderBtn.on({
             blog.contractRight();
         }
     }
+});
+
+blog.rightCon.on('click', '.selectable-header', function(){
+    var dataId = this.id;
+    $('html,body').animate({scrollTop: $("div[data-id='"+dataId+"']").offset().top-60}, 'slow');
 });
 
 video = {

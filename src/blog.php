@@ -14,6 +14,9 @@
             <div class="banner">
                 <a href="index.html">ENSO corp</a>
             </div>
+            <div class="back-to-top">
+                <img src="assets/up-arrow.png" width="25px;">
+            </div>
             <ul class="top-menu">
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="videos.php">Videos</a></li>
