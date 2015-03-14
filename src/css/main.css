@@ -62,6 +62,10 @@ h1, h2, h3, h4, h5 ,h6{
     position: absolute;
     right: 0;
 }
+.top-menu a:hover{
+    color: #E45B0A;
+    text-shadow: 0 0 0.2em #E45B0A;
+}
 .top-menu > li{
     display:inline-block;
     position: relative;
@@ -76,12 +80,6 @@ h1, h2, h3, h4, h5 ,h6{
     left: 0;
     height: 100%;
     width: 1px;
-}
-
-.top-menu a:hover{
-    color: #E45B0A;
-    text-shadow: 0 0 0.2em #E45B0A;
-    background-color: #2F2F2F;
 }
 .mobile-top-menu{
     float:right;
@@ -100,6 +98,44 @@ h1, h2, h3, h4, h5 ,h6{
     top: 17px;
     display: none;
     cursor: pointer;
+}
+/*
+* ========
+* HEADER - KILLBOARD
+* ========
+*/
+.killboard-menu{
+    list-style: none;
+    color: #f2ecee;
+    display: block;
+    position: absolute;
+    right: 66px;
+    padding: 0 3px 10px;
+    background-color: #2F2F2F;
+    margin-left: 15px;
+}
+.is-visible-kb {
+    top: 37px;
+    right: 66px;
+    transition: top 0.3s;
+}
+.is-hidden-kb {
+    visibility: hidden;
+    top: 24px;
+    right: 66px;
+    transition: top 0.3s;
+}
+.killboard-menu li {
+    border-bottom: 1px solid #585657;
+    padding: 0 10px;
+}
+.killboard-menu li:first-child{
+    border-top: 1px solid #585657;
+}
+.killboard-menu li:hover{
+    background-color: #f2ecee;
+    color: #E45B0A;
+    text-shadow: 0 0 0.2em #E45B0A;
 }
 /*
 * ========
@@ -137,32 +173,6 @@ h1, h2, h3, h4, h5 ,h6{
     visibility: hidden;
     top: 24px;
     right: 0;
-    transition: top 0.3s;
-}
-/*
-* ========
-* HEADER - KILLBOARD
-* ========
-*/
-.killboard-menu{
-    list-style: none;
-    color: #f2ecee;
-    display: block;
-    position: absolute;
-    right: 73px;
-    padding: 10px;
-    background-color: #2F2F2F;
-    margin-left: 15px;
-}
-.is-visible-kb {
-    top: 37px;
-    right: 73px;
-    transition: top 0.3s;
-}
-.is-hidden-kb {
-    visibility: hidden;
-    top: 24px;
-    right: 73px;
     transition: top 0.3s;
 }
 /*
