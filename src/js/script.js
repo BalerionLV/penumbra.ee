@@ -44,6 +44,14 @@ menu = {
     }
 };
 
+$('#blog-menu-btn').on('click', function(){
+    $('.landing-body').fadeOut('slow');
+    setTimeout(continueExecution, 600);
+    function continueExecution()
+    {
+        window.location.replace('http://penumbra.dev.ee/blog.php#');
+    }
+});
 /** menu - login form */
 menu.loginBtn.on({
     click: function(){
@@ -346,5 +354,11 @@ landing.showApplyBtn.on({
         }
     }
 });
+
+var angle = 0;
+setInterval(function(){
+    angle+=1;
+    $("#image").rotate(angle);
+},50);
 
 });

@@ -7,37 +7,12 @@
 </head>
 <body>
     <!-- HEADER -->
-    <div class="menu-container dark-bg">
-        <div class="container relative">
-            <div class="banner">
-                <a href="index.html">ENSO corp</a>
-            </div>
-            <ul class="top-menu">
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="videos.php">Videos</a></li>
-                <li><a id="kb-btn" href="#">Killboard</a></li>
-                <li><a id="login-btn" href="#">Login</a></li>
-                <form action="backend/login.php" id="login-form" method="post" accept-charset="UTF-8" class="login-form is-hidden-login">
-                    <input class="login-input-fields" type="text" placeholder="Username" maxlength="15" name="username">
-                    <input class="login-input-fields" type="password" placeholder="Password" maxlength="25" name="password">
-                    <input class="login-btn" type="submit" value="Enter" name="enter">
-                </form>
-                <ul id="killboard-menu" class="killboard-menu is-hidden-kb">
-                    <li><a href="https://zkillboard.com/corporation/98268576/" target="_blank">zKillboard</a></li>
-                    <li><a href="http://eve-kill.net/?a=corp_detail&crp_id=359700" target="_blank">EVE-Kill</a></li>
-                    <li><a href="http://eve.battleclinic.com/killboard/combat_record.php?name=Enso+Corp&type=corporation" target="_blank">Battleclinic</a></li>
-                </ul>
-            </ul>
-            <div class="mobile-top-menu">
-                -MENU-
-            </div>
-        </div>
-    </div>
+    <?php include 'menu.php'; ?>
     <!-- LANDING BODY -->
     <div class="landing-body">
         <div class="container">
             <div class="landing-logo-container">
-                <img src="assets/gallente.png">
+                <img id="image" src="assets/caldari.png" width="250px">
             </div>
             <div class="landing-descr-container">
                 <div class="landing-description">
@@ -135,4 +110,5 @@
 <script src="js/jquerylib.js"></script>
 <script src="js/script.js"></script>
 <script src="js/process_article_data.js"></script>
+<script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
 </html>

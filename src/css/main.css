@@ -244,13 +244,18 @@ h1, h2, h3, h4, h5 ,h6{
     border: 1px solid #cacaca;
     cursor: pointer;
 }
+.expander-btn:hover{
+    background-color: #eaeaea;
+}
 .contract-img {
-    background-color: #f0f0f0;
     padding: 5px 45%;
-    border: 1px solid #cacaca;
 }
 .selectable-header{
     cursor: pointer;
+}
+.selectable-header:hover{
+    color: #E45B0A;
+    text-shadow: 0 0 0.02em #E45B0A;
 }
 /*
 * ========
