@@ -19,45 +19,15 @@
             <div class="recent-posts invisible-vis"></div>
         </div>
 
-        <div class="append-content"></div>
-       <!--<?php include "backend/get_article.php" ?>-->
+        <div class="append-content">
+        </div>
         <div class="clear-both"></div>
     </div>
 
 </body>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-<script src="js/jquerylib.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/process_article_data.js"></script>
 <script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
+<script src="plugins/ckeditor/ckeditor.js"></script>
 </html>
-
-<!--
-CREATE TABLE members (
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(30),
-    password VARCHAR(30)
-);
-
-/* Then insert an admin for testing: */
-INSERT INTO members (username, password)
-    VALUES ('admin', '2Strong!');
--=>
-
-<!--
-CREATE TABLE posts (
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(50),
-    body TEXT,
-    created DATETIME DEFAULT NULL,
-    modified DATETIME DEFAULT NULL
-);
-
-/* Then insert some posts for testing: */
-INSERT INTO posts (title, body, created)
-    VALUES ('The title', 'This is the post body.', NOW());
-INSERT INTO posts (title, body, created)
-    VALUES ('A title once again', 'And the post body follows.', NOW());
-INSERT INTO posts (title, body, created)
-    VALUES ('Title strikes back', 'This is really exciting! Not.', NOW());
--->

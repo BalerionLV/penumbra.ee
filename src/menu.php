@@ -14,7 +14,7 @@
             <li><a id="login-btn" href="#">Login</a></li>
             <?php } ?>
             <?php if(isset($_SESSION["username"])){ ?>
-            <li><a id="profile" href="#">Profile</a></li>
+            <!--<li><a id="profile" href="#">Profile</a></li>-->
             <li><a id="logout-btn" href="backend/logout.php">Logout</a></li>
             <?php } ?>
             <form action="backend/login.php" id="login-form" method="post" accept-charset="UTF-8" class="login-form is-hidden-login">
