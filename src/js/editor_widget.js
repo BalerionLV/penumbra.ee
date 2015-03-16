@@ -17,10 +17,4 @@ $(function(){
         $('.overlay').fadeIn('fast');
         menu.closeEditMenu();
     });
-
-    ///** echo data */
-    //$('.editor-submit').on('click', function(){
-    //    var data = CKEDITOR.instances.articleBody.getData();
-    //    alert(data);
-    //});
 });

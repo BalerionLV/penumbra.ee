@@ -107,10 +107,5 @@
         </div>
     </div>
 </body>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/process_article_data.js"></script>
-<script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
-
+<?php include 'scripts.php'; ?>
 </html>

@@ -128,6 +128,18 @@ $('.back-to-top').click(function() {
     $('html, body').animate({scrollTop: 0}, 'slow');
 });
 
+/** REGISTER */
+$('.register-button').on('click', function(){
+$('.registration-container').fadeIn('fast');
+$('.overlay').fadeIn('fast');
+    menu.closeLoginForm();
+});
+
+$('#registration-close-widget').on('click', function(){
+    $('.registration-container').fadeOut('fast');
+    $('.overlay').fadeOut('fast');
+});
+
 blog = {
     rightCon: $('.right-content'),
     recentPosts: $('.recent-posts'),
@@ -176,6 +188,17 @@ blog.expanderBtn.on({
         }
     }
 });
+
+$(document).ready(function(){
+    setTimeout(openOnLoad, 1000);
+    function openOnLoad(){
+        blog.expandRight();
+    }
+});
+//
+//$('.right-content').load(function(){
+//    blog.expandRight();
+//});
 
 blog.rightCon.on('click', '.selectable-header', function(){
     var dataId = this.id;

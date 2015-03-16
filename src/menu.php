@@ -17,13 +17,13 @@
             <li><a id="login-btn" href="#">Login</a></li>
             <?php } ?>
             <?php if(isset($_SESSION["username"])){ ?>
-            <!--<li><a id="profile" href="#">Profile</a></li>-->
             <li><a id="logout-btn" href="backend/logout.php">Logout</a></li>
             <?php } ?>
             <form action="backend/login.php" id="login-form" method="post" accept-charset="UTF-8" class="login-form is-hidden-login">
                 <input class="login-input-fields" type="text" placeholder="Username" maxlength="15" name="username">
                 <input class="login-input-fields" type="password" placeholder="Password" maxlength="25" name="password">
                 <input class="login-btn" type="submit" value="Enter" name="enter">
+                <span style="cursor:pointer;" class="register-button">Register</span>
             </form>
             <ul id="killboard-menu" class="killboard-menu is-hidden-kb">
                 <li><a href="https://zkillboard.com/corporation/98268576/" target="_blank">zKillboard</a></li>
