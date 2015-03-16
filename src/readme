@@ -1,3 +1,8 @@
+WORK SPRINT PLAN:
+1. website redirect
+2. workshop preparations {popup, if not closed - redirects in 5 seconds}
+3. video bug-fix
+
 DATABA CREATION:
 
 CREATE TABLE members (

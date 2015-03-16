@@ -7,8 +7,9 @@
 body{
     padding: 80px 0 0 0;
     margin: 0;
-    /*background: url(../assets/bg1.jpg);*/
     background-color: #E8E8E8;
+    position: relative;
+    min-height: 88%;
 }
 a{
     text-decoration: none;
@@ -19,6 +20,7 @@ h1, h2, h3, h4, h5 ,h6{
 }
 html {
     overflow-y: scroll;
+    height: 100%;
 }
 .dark-bg{
     background-color: #222222;
@@ -33,6 +35,16 @@ html {
 }
 .clear-both{
     clear: both;
+}
+.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
 /*
 * ========
@@ -104,6 +116,43 @@ html {
 }
 /*
 * ========
+* HEADER - EDIT
+* ========
+*/
+.edit-blog-menu{
+    list-style: none;
+    color: #f2ecee;
+    display: block;
+    position: absolute;
+    left: 63px;
+    padding: 0 3px 10px;
+    background-color: #2F2F2F;
+}
+.is-visible-blog-menu {
+    top: 37px;
+    left: 63px;
+    transition: top 0.3s;
+}
+.is-hidden-blog-menu {
+    visibility: hidden;
+    top: 24px;
+    left: 63px;
+    transition: top 0.3s;
+}
+.edit-blog-menu li {
+    border-bottom: 1px solid #585657;
+    padding: 0 10px;
+}
+.edit-blog-menu li:first-child{
+    border-top: 1px solid #585657;
+}
+.edit-blog-menu li:hover{
+    background-color: #f2ecee;
+    color: #E45B0A;
+    text-shadow: 0 0 0.2em #E45B0A;
+}
+/*
+* ========
 * HEADER - KILLBOARD
 * ========
 */
@@ -112,20 +161,20 @@ html {
     color: #f2ecee;
     display: block;
     position: absolute;
-    right: 66px;
+    left: 109px;
     padding: 0 3px 10px;
     background-color: #2F2F2F;
     margin-left: 15px;
 }
 .is-visible-kb {
     top: 37px;
-    right: 66px;
+    left: 109px;
     transition: top 0.3s;
 }
 .is-hidden-kb {
     visibility: hidden;
     top: 24px;
-    right: 66px;
+    left: 109px;
     transition: top 0.3s;
 }
 .killboard-menu li {
@@ -200,6 +249,10 @@ html {
     color: grey;
     margin: 0;
 }
+.author {
+    margin-left: 15px;
+    font-size: 14px;
+}
 /*.right-content{*/
     /*float:right;*/
     /*border:1px solid #CACACA;*/
@@ -262,6 +315,57 @@ html {
 }
 /*
 * ========
+* BLOG - ARTICLE CONTROL
+* ========
+*/
+.article-controls-container {
+    padding: 5px;
+}
+/*
+* ========
+* BLOG - ADD ARTICLE WIDGET
+* ========
+*/
+.title-input {
+    margin-bottom: 15px;
+    width: 97%;
+    font-size: 25px;
+    padding: 5px 10px;
+}
+.add-post-container {
+    display: none;
+    z-index: 15;
+    position: absolute;
+    top: 145px;
+    right: 25%;
+    left: 25%;
+    padding :15px;
+    background-color: #e8e8e8;
+    text-align: center;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+}
+.editor-btn {
+    border: none;
+    background-color: #e8e8e8;
+    float:right;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 0.1em #000;
+    padding: 0;
+}
+.editor-submit {
+    margin-top: 10px;
+    border: 2px solid #cacaca;
+    background-color: #C1C1C1 ;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/*
+* ========
 * VIDEO PAGE
 * ========
 */
@@ -313,14 +417,6 @@ html {
 .invisible-vis {
     visibility: hidden;
 }
-/*
-* ========
-* BLOG - ARTICLE CONTROL
-* ========
-*/
-    .article-controls-container {
-        padding: 5px;
-    }
 /*
 * ========
 * LANDING

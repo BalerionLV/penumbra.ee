@@ -8,6 +8,9 @@
         </div>
         <ul class="top-menu">
             <li><a id="blog-menu-btn" href="#">Blog</a></li>
+            <?php if(isset($_SESSION["username"])){ ?>
+            <li><a id="edit-menu-btn" href="#">Edit</a></li>
+            <?php } ?>
             <!--<li><a href="videos.php">Videos</a></li>-->
             <li><a id="kb-btn" href="#">Killboard</a></li>
             <?php if(!isset($_SESSION["username"])){ ?>
@@ -26,6 +29,9 @@
                 <li><a href="https://zkillboard.com/corporation/98268576/" target="_blank">zKillboard</a></li>
                 <li><a href="http://eve-kill.net/?a=corp_detail&crp_id=359700" target="_blank">EVE-Kill</a></li>
                 <li><a href="http://eve.battleclinic.com/killboard/combat_record.php?name=Enso+Corp&type=corporation" target="_blank">Battleclinic</a></li>
+            </ul>
+            <ul id="edit-menu" class="edit-blog-menu is-hidden-blog-menu">
+                <li class="add-post"><a href="#">Add an article</a></li>
             </ul>
         </ul>
         <div class="mobile-top-menu">

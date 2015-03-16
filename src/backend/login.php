@@ -28,7 +28,7 @@
                 }
         } else {
             $_SESSION['error'] = 'Wrong username or password';
-            header('Location: ../index.php?wrong_cred');
+            header("location:../blog.php");
         }
     }
 ?>

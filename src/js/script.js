@@ -6,6 +6,13 @@ $(function(){
 menu = {
     loginToggler: 0,
     kbToggler: 0,
+    editToggler: 0,
+
+
+    hiddenEditMenu: 'is-hidden-blog-menu',
+    visibleEditMenu: 'is-visible-blog-menu',
+    editMenu: $('#edit-menu'),
+
     hiddenKbMenu: 'is-hidden-kb',
     visibleKbMenu: 'is-visible-kb',
     hiddenLoginForm: 'is-hidden-login',
@@ -14,33 +21,50 @@ menu = {
 
     loginBtn:$('#login-btn'),
     kbBtn: $('#kb-btn'),
+    editBtn: $('#edit-menu-btn'),
     loginForm: $('#login-form'),
     killboardMenu: $('#killboard-menu'),
+    showLoginForm: function(){
+        this.loginBtn.addClass(this.activeBtn);
+        this.kbBtn.removeClass(this.activeBtn);
+        this.editBtn.removeClass(this.activeBtn);
+        this.loginForm.addClass(menu.visibleLoginForm)
+                      .removeClass(menu.hiddenLoginForm);
+        this.loginToggler = 1;
+    },
     closeLoginForm: function(){
         this.loginToggler = 0;
         this.loginBtn.removeClass(this.activeBtn);
         this.loginForm.removeClass(this.visibleLoginForm)
-                      .addClass(this.hiddenLoginForm);
+            .addClass(this.hiddenLoginForm);
+    },
+    showKbMenu: function(){
+        this.kbBtn.addClass(this.activeBtn);
+        this.loginBtn.removeClass(this.activeBtn);
+        this.editBtn.removeClass(this.activeBtn);
+        this.killboardMenu.addClass(menu.visibleKbMenu)
+                          .removeClass(this.hiddenKbMenu);
+        this.kbToggler = 1;
     },
     closeKbMenu: function(){
         this.kbToggler = 0;
         this.kbBtn.removeClass(this.activeBtn);
         this.killboardMenu.removeClass(this.visibleKbMenu)
-                          .addClass(this.hiddenKbMenu);
+            .addClass(this.hiddenKbMenu);
     },
-    showLoginForm: function(){
-        this.loginBtn.addClass(this.activeBtn);
+    showEditMenu: function(){
+        this.editBtn.addClass(this.activeBtn);
         this.kbBtn.removeClass(this.activeBtn);
-        this.loginForm.addClass(menu.visibleLoginForm)
-                      .removeClass(menu.hiddenLoginForm);
-        this.loginToggler = 1;
-    },
-    showKbMenu: function(){
-        this.kbBtn.addClass(this.activeBtn)
         this.loginBtn.removeClass(this.activeBtn);
-        this.killboardMenu.addClass(menu.visibleKbMenu)
-                          .removeClass(this.hiddenKbMenu);
-        this.kbToggler = 1;
+        this.editMenu.addClass(menu.visibleEditMenu)
+            .removeClass(this.hiddenEditMenu);
+        this.editToggler = 1;
+    },
+    closeEditMenu: function(){
+        this.editToggler = 0;
+        this.editBtn.removeClass(this.activeBtn);
+        this.editMenu.removeClass(this.visibleEditMenu)
+            .addClass(this.hiddenEditMenu);
     }
 };
 
@@ -58,6 +82,7 @@ menu.loginBtn.on({
         if(menu.loginToggler == 0){
             menu.showLoginForm();
             menu.closeKbMenu();
+            menu.closeEditMenu();
         } else {
             menu.closeLoginForm();
         }
@@ -70,8 +95,22 @@ menu.kbBtn.on({
         if(menu.kbToggler == 0){
             menu.showKbMenu();
             menu.closeLoginForm();
+            menu.closeEditMenu();
         } else {
             menu.closeKbMenu();
+        }
+    }
+});
+
+/** menu - EDIT sub-menu */
+menu.editBtn.on({
+    click: function(){
+        if(menu.editToggler == 0){
+            menu.showEditMenu();
+            menu.closeLoginForm();
+            menu.closeKbMenu();
+        } else {
+            menu.closeEditMenu();
         }
     }
 });
@@ -142,6 +181,7 @@ blog.rightCon.on('click', '.selectable-header', function(){
     var dataId = this.id;
     $('html,body').animate({scrollTop: $("div[data-id='"+dataId+"']").offset().top-60}, 'slow');
 });
+
 
 video = {
     corpToggler: 0,
@@ -360,7 +400,5 @@ setInterval(function(){
     angle+=1;
     $("#image").rotate(angle);
 },50);
-
-CKEDITOR.replace( 'editor1' );
 
 });

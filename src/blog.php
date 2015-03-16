@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="overlay"></div>
     <!-- HEADER -->
 <?php include 'menu.php'; ?>
     <!-- CONTENT -->
@@ -20,6 +21,12 @@
         </div>
 
         <div class="append-content">
+            <form class="add-post-container" method="POST" action="backend/post_article.php">
+                <button id="editor-close-widget" class="editor-btn" type="button">X</button>
+                <input name="title" class="title-input" type="text" placeholder="Title">
+                <textarea name="articleBody"></textarea>
+                <button class="editor-submit" type="submit">Submit</button>
+            </form>
         </div>
         <div class="clear-both"></div>
     </div>
@@ -29,5 +36,8 @@
 <script src="js/script.js"></script>
 <script src="js/process_article_data.js"></script>
 <script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
+<?php if(isset($_SESSION["username"])){ ?>
 <script src="plugins/ckeditor/ckeditor.js"></script>
+<script src="js/editor_widget.js"></script>
+<?php } ?>
 </html>

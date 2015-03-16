@@ -12,7 +12,7 @@ $.ajax({
     },
     success: function (result) {
         result.forEach(function(article){
-            something.push({id: article[0], title: article[1], body: article[2], created: article[3], modified: article[4]})
+            something.push({id: article[0], title: article[1], body: article[2], created: article[3], modified: article[4], author: article[5]})
         });
         for(var i = something.length-1; i>-1; i--) {
             var lastModified;
@@ -21,7 +21,7 @@ $.ajax({
             } else {
                 lastModified = something[i].created;
             }
-            $('<div class="left-content left-expanded" data-id="'+something[i].id+'"> <h2>'+something[i].title+'</h2><p class="time-created"><i>'+lastModified+'</i></p><p>'+something[i].body+' </p><div id="article-controls-container" class="article-controls-container"></div></div> ').appendTo('.append-content');
+            $('<div class="left-content left-expanded" data-id="'+something[i].id+'"> <h2>'+something[i].title+'</h2><span class="time-created"><i>'+lastModified+'</i></span><span class="author"><b><i>'+something[i].author+'</i></b></span><p>'+something[i].body+' </p><div id="article-controls-container" class="article-controls-container"><?php include "article_controls.php"; ?></div></div> ').appendTo('.append-content');
 
             $('<h4 class="selectable-header" id="'+something[i].id+'">'+something[i].title+'</h4><p class="time-created"><i>'+lastModified+'</i></p><br>').appendTo('.recent-posts');
         }
