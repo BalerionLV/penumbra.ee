@@ -161,8 +161,6 @@ blog = {
         this.expanderBtn.toggleClass('contract-img ');
         this.expanderBtn.find('img').attr('src', 'assets/left-arrow.png');
         this.toggler = 1;
-        menu.closeLoginForm();
-        menu.closeKbMenu();
     },
     expandRight: function(){
         this.rightCon.removeClass(this.rightContr)
@@ -173,8 +171,6 @@ blog = {
         this.expanderBtn.toggleClass('contract-img ');
         this.expanderBtn.find('img').attr('src', 'assets/right-arrow.png');
         this.toggler = 0;
-        menu.closeLoginForm();
-        menu.closeKbMenu();
     }
 };
 

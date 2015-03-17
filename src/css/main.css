@@ -9,7 +9,7 @@ body{
     margin: 0;
     background-color: #E8E8E8;
     position: relative;
-    min-height: 88%;
+    min-height: 92%;
 }
 a{
     text-decoration: none;
@@ -465,7 +465,7 @@ html {
 .landing-body{
     background: url("../assets/evebg.jpg") no-repeat scroll 50% 50% / cover #000;
     color: #f2ecee;
-    margin-top: -25px;
+    margin-top: -27px;
     position: absolute;
     top: 80px;
     right: 0;

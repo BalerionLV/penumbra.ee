@@ -9,7 +9,12 @@
 </head>
 <body>
     <!-- HEADER -->
-    <?php include 'menu.php'; ?>
+    <?php
+        include 'menu.php';
+        include 'registration.php';
+        include 'add_post.php';
+    ?>
+    <?php  ?>
     <!-- LANDING BODY -->
     <div class="landing-body">
         <div class="container">

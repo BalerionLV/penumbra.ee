@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<?php include 'registration.php'; ?>
-<div class="overlay"></div>
+    <?php
+        include 'registration.php';
+        include 'add_post.php';
+    ?>
+    <div class="overlay"></div>
     <!-- HEADER -->
-<?php include 'menu.php'; ?>
+    <?php include 'menu.php'; ?>
     <!-- CONTENT -->
     <div class="container content-container">
         <div class="right-content right-contracted">
@@ -22,12 +25,6 @@
         </div>
 
         <div class="append-content">
-            <form class="add-post-container" method="POST" action="backend/post_article.php">
-                <button id="editor-close-widget" class="popup-btn" type="button">X</button>
-                <input name="title" class="title-input" type="text" placeholder="Title">
-                <textarea name="articleBody"></textarea>
-                <button class="editor-submit" type="submit">Submit</button>
-            </form>
         </div>
         <div class="clear-both"></div>
     </div>
